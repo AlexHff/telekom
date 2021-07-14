@@ -1,0 +1,50 @@
+body {
+    background-color: ghostwhite;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+footer {
+    width: 100%;
+    text-align: center;
+    bottom: 0px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 10px;
+}
+
+.grid-container a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.grid-item {
+    border: darkgray;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 1px;
+    padding: 15px;
+    text-align: center;
+    background-color: rgb(245, 245, 245);
+}
+
+nav {
+    overflow: hidden;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav li {
+    float: left;
+    margin-right: 10px;
+}
+
+.grid-container-recipe {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 10px;
+}
