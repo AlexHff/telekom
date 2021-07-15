@@ -30,6 +30,12 @@ footer {
     background-color: rgb(245, 245, 245);
 }
 
+.grid-item img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 nav {
     overflow: hidden;
 }
@@ -52,4 +58,13 @@ nav li {
 #map {
     height: 400px;
     width: 100%;
+}
+
+table {
+    width: 100%;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 15px;
 }
