@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <!-- HTML -->
+    <h1 id="AAA">200 gr Zucker</h1>
+
+    <!-- JAVASCRIPT -->
+    <script>
+        function fun() {
+            let zucker = 200;
+            // Benutzer Input
+            let BBB = prompt("Wie viele Personen?");
+            // Holt Element mit Id gleich AAA
+            let EEE = document.getElementById("AAA");
+            // Schreibt BBB Wert in dem EEE Inhalt
+            EEE.innerHTML = zucker + BBB + " gr Zucker";
+        }
+        setTimeout(fun, 1);
+    </script>
+</body>
+
+</html>
