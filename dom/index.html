@@ -11,14 +11,12 @@
 
     <!-- JAVASCRIPT -->
     <script>
-        document // 1 - 24
-        document.getElementById("zahl") // 6 - 8
-        document.getElementById("zahl").innerText // 7
-
-        document.getElementById("increment").onclick = function () {
+        function updateZahl() {
             document.getElementById("zahl").innerText =
                         document.getElementById("wert").value;
         }
+
+        document.getElementById("increment").onclick = updateZahl;
     </script>
 </body>
 
