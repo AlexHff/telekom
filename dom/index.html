@@ -3,20 +3,22 @@
 
 <body>
     <!-- HTML -->
-    <h1 id="AAA">200 gr Zucker</h1>
+    <h1 id="zahl">
+        0
+    </h1>
+    <input type="number" id="wert">
+    <input type="submit" id="increment">
 
     <!-- JAVASCRIPT -->
     <script>
-        function fun() {
-            let zucker = 200;
-            // Benutzer Input
-            let BBB = prompt("Wie viele Personen?");
-            // Holt Element mit Id gleich AAA
-            let EEE = document.getElementById("AAA");
-            // Schreibt BBB Wert in dem EEE Inhalt
-            EEE.innerHTML = zucker + BBB + " gr Zucker";
+        document // 1 - 24
+        document.getElementById("zahl") // 6 - 8
+        document.getElementById("zahl").innerText // 7
+
+        document.getElementById("increment").onclick = function () {
+            document.getElementById("zahl").innerText =
+                        document.getElementById("wert").value;
         }
-        setTimeout(fun, 1);
     </script>
 </body>
 
