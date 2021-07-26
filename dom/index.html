@@ -3,20 +3,53 @@
 
 <body>
     <!-- HTML -->
-    <h1 id="zahl">
-        0
-    </h1>
-    <input type="number" id="wert">
-    <input type="submit" id="increment">
+    <h1>Der Preis ist heiss</h1>
+    <input type="number" id="input" name="input">
+    <button id="submit">Senden</button>
+    <h2 id="hint">Hinweis</h2>
+    <h3 id="myNumber"></h3>
 
     <!-- JAVASCRIPT -->
     <script>
-        function updateZahl() {
-            document.getElementById("zahl").innerText =
-                        document.getElementById("wert").value;
+        function checkNumber() {
+            // Holt Wert aus Eingabefeld als string
+            let input = document.getElementById("input").value;
+            // Convertiert string zu number
+            input = Number.parseInt(input);
+
+            // Holt das Element für den Hinweis
+            let hint = document.getElementById("hint");
+
+            // Zeigt die aktuelle Zahl an
+            document.getElementById("myNumber").innerText = input;
+
+            // Testet den richtigen Wertebereich
+            if (input > 10 || input < 1) {
+                hint.innerText = "Zahl zwischen 1 und 10 eingeben";
+                return;
+            }
+
+            // Vergleicht die Zufallszahl mit dem eingegebenen Wert
+            if (input < random) {
+                // Überschreibt den Inhalt fur den Hinweis
+                hint.innerText = "Grösser";
+            } else if (input > random) {
+                // Überschreibt den Inhalt fur den Hinweis
+                hint.innerText = "Kleiner";
+            } else {
+                // Überschreibt den Inhalt fur den Hinweis
+                hint.innerText = "Gleich";
+            }
+
+            // Resettet den Wert von dem Eingabefeld
+             document.getElementById("input").value = "";
         }
 
-        document.getElementById("increment").onclick = updateZahl;
+        // Erstellt eine Zufallszahl
+        const random = Math.floor(Math.random() * 10 + 1);
+
+        // Wenn auf Senden geklickt wird
+        document.getElementById("submit").onclick = checkNumber;
     </script>
 </body>
 
