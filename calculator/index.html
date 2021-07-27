@@ -4,20 +4,55 @@
 <body>
     <!-- HTML -->
     <input type="number" id="a">
-    +
+    <select id="operation">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+    </select>
     <input type="number" id="b">
     <button id="ok">Senden</button>
     <p id="out">Ergebnis:</p>
 
     <!-- JAVASCRIPT -->
     <script>
-        function addition() {
+        function run() {
             const a = parseFloat(document.getElementById("a").value);
             const b = parseFloat(document.getElementById("b").value);
-            document.getElementById("out").innerText = a + b;
+            const operation = document.getElementById("operation").value;
+            var output = document.getElementById("out");
+            output.innerText = "Ergebnis: ";
+            console.log(a, b, operation);
+
+            // if (operation === "+") {
+            //     output.innerText += a + b;
+            // } else if (operation === "-") {
+            //     output.innerText += a - b;
+            // } else if (operation === "*") {
+            //     output.innerText += a * b;
+            // } else {
+            //     output.innerText += a / b;
+            // }
+
+            switch (operation) {
+                case "+": // else if
+                    output.innerText += a + b;
+                    break;
+                case "-": // else if
+                    output.innerText += a - b;
+                    break;
+                case "*": // else if
+                    output.innerText += a * b;
+                    break;
+                case "/": // else if
+                    output.innerText += a / b;
+                    break;
+                default: // else
+                    console.log("error");
+            }
         }
 
-        document.getElementById("ok").onclick = addition;
+        document.getElementById("ok").onclick = run;
     </script>
 </body>
 
