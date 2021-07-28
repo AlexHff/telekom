@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <script src="rezepte.js"></script>
+</head>
+
+<body>
+    <!-- HTML -->
+    <h1>Mein Rezepte</h1>
+    <ul id="alleRezepte"></ul>
+
+    <!-- JAVASCRIPT -->
+    <script>
+        for (let i = 0; i < rezepte.length; i++) {
+            const meinRezept = "<li>" + rezepte[i].name + "</li>";
+            let rezeptElement = document.getElementById("alleRezepte");
+            rezeptElement.innerHTML = rezeptElement.innerHTML + meinRezept;
+        }
+    </script>
+</body>
+
+</html>
