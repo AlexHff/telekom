@@ -10,14 +10,28 @@
 <body>
     <!-- HTML -->
     <h1>Mein Rezepte</h1>
-    <ul id="alleRezepte"></ul>
+    <table id="meineRezepte">
+        <tr>
+            <th></th>
+            <th>Name</th>
+            <th>Zubereitungszeit</th>
+        </tr>
+    </table>
 
     <!-- JAVASCRIPT -->
     <script>
         for (let i = 0; i < rezepte.length; i++) {
-            const meinRezept = "<li>" + rezepte[i].name + "</li>";
-            let rezeptElement = document.getElementById("alleRezepte");
-            rezeptElement.innerHTML = rezeptElement.innerHTML + meinRezept;
+            const name = rezepte[i].name;
+            const zubereitungszeit = rezepte[i].zubereitungszeit;
+            const bild = rezepte[i].bild;
+            let meineRezepte = document.getElementById("meineRezepte");
+            meineRezepte.innerHTML = meineRezepte.innerHTML + `
+                <tr>
+                    <td><img src="${bild}" alt="meinBild" width="100">
+                    <td>${name}</td>
+                    <td>${zubereitungszeit} Minuten</td>
+                </tr>
+            `;
         }
     </script>
 </body>
