@@ -13,9 +13,10 @@
 
     <!-- JAVASCRIPT -->
     <script>
-        var url = new URL(window.location.href);
-        var id = url.searchParams.get("id");
-        console.log(rezepte[id - 1]);
+        const url = new URL(window.location.href);
+        const id = url.searchParams.get("id");
+        const rezept = rezepte[id - 1];
+        document.getElementById("rezeptName").innerText = rezept.name;
     </script>
 </body>
 

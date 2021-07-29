@@ -33,7 +33,7 @@
             meineRezepte.innerHTML = meineRezepte.innerHTML + `
                 <tr>
                     <td><img src="${bild}" alt="meinBild" width="200">
-                    <td>${name}</td>
+                    <td><a href="rezept.html?id=${rezepte[i].id}">${name}</a></td>
                     <td>${zubereitungszeit} Min</td>
                     <td><ul>${zutatenListe}</ul></td>
                 </tr>
