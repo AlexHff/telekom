@@ -15,6 +15,8 @@
             <th></th>
             <th>Name</th>
             <th>Zubereitungszeit</th>
+            <th>Zutaten</th>
+            <th>Naehrwerte</th>
         </tr>
     </table>
 
@@ -24,12 +26,24 @@
             const name = rezepte[i].name;
             const zubereitungszeit = rezepte[i].zubereitungszeit;
             const bild = rezepte[i].bild;
+            const naehrwerte = rezepte[i].naehrwerte;
+            const zutaten = rezepte[i].zutaten;
+            let zutatenListe = "";
+            for (let k = 0; k < zutaten.length; k++) {
+                zutatenListe += `
+                    <li>
+                        ${zutaten[k].wert} ${zutaten[k].maßeinheit} ${zutaten[k].zutat}
+                    </li>
+                `;
+            }
             let meineRezepte = document.getElementById("meineRezepte");
             meineRezepte.innerHTML = meineRezepte.innerHTML + `
                 <tr>
                     <td><img src="${bild}" alt="meinBild" width="100">
                     <td>${name}</td>
                     <td>${zubereitungszeit} Minuten</td>
+                    <td><ul>${zutatenListe}</ul></td>
+                    <td>Fett: ${naehrwerte.fett}</td>
                 </tr>
             `;
         }
