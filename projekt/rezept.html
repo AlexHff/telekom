@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <script src="rezepte.js"></script>
+</head>
+
+<body>
+    <!-- HTML -->
+    <h1 id="rezeptName"></h1>
+
+    <!-- JAVASCRIPT -->
+    <script>
+        var url = new URL(window.location.href);
+        var id = url.searchParams.get("id");
+        console.log(rezepte[id - 1]);
+    </script>
+</body>
+
+</html>
